@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#login_email\"}\n  (Session info: chrome=83.0.4103.61)",
-  "stacktrace": "Backtrace:\n\tOrdinal0 [0x01259563+2725219]\n\tOrdinal0 [0x01158551+1672529]\n\tOrdinal0 [0x01040359+525145]\n\tOrdinal0 [0x00FD9755+104277]\n\tOrdinal0 [0x00FF53C0+218048]\n\tOrdinal0 [0x00FEAAD0+174800]\n\tOrdinal0 [0x00FF3D7C+212348]\n\tOrdinal0 [0x00FEA94B+174411]\n\tOrdinal0 [0x00FD2528+75048]\n\tOrdinal0 [0x00FD35A0+79264]\n\tOrdinal0 [0x00FD3539+79161]\n\tOrdinal0 [0x0116D607+1758727]\n\tGetHandleVerifier [0x01376546+1050150]\n\tGetHandleVerifier [0x01376291+1049457]\n\tGetHandleVerifier [0x013810D7+1094071]\n\tGetHandleVerifier [0x01376B46+1051686]\n\tOrdinal0 [0x01165B06+1727238]\n\tOrdinal0 [0x0116EB7B+1764219]\n\tOrdinal0 [0x0116ECE3+1764579]\n\tOrdinal0 [0x01184C05+1854469]\n\tBaseThreadInitThunk [0x75666359+25]\n\tRtlGetAppContainerNamedObjectPath [0x77E97C24+228]\n\tRtlGetAppContainerNamedObjectPath [0x77E97BF4+180]\n"
-}

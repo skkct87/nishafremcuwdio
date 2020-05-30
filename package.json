@@ -4,12 +4,13 @@
   "description": "automation",
   "main": "index.js",
   "scripts": {
-    "test": "wdio"
+    "test": "wdio",
+    "allure": "node_modules/.bin/allure generate ./allure-results -c && allure open"
   },
   "author": "skumar",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/allure-reporter": "^6.1.12",
+    "@wdio/allure-reporter": "^6.1.14",
     "@wdio/cli": "^6.1.12",
     "@wdio/cucumber-framework": "^6.1.13",
     "@wdio/local-runner": "^6.1.12",

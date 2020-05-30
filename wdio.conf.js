@@ -8,6 +8,7 @@ exports.config = {
     // on a remote machine).
     runner: 'local',
     //
+    path: '/wd/hub',
     // ==================
     // Specify Test Files
     // ==================
@@ -124,11 +125,15 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: [['allure', {outputDir: 'allure-results'}]],
+    reporters: [['allure',
+    {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+       disableWebdriverScreenshotsReporting: true,}]],
  //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./features/step-definitions/*.js'],        // <string[]> (file/dir) require files before executing features
+        require: ['./step_definitions/**/*.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         requireModule: [],  // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
