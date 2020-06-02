@@ -54,6 +54,10 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+    
+
+        
+        
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -129,7 +133,18 @@ exports.config = {
     {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
-       disableWebdriverScreenshotsReporting: true,}]],
+       disableWebdriverScreenshotsReporting: true,}],
+    ],
+
+    // takeScreenshot, function() {
+    //     const moment = require('moment');
+    //     const timestamp = moment().format('YYYYMMDD-HHmmss.SSS');
+    //     this.browser.saveScreenshot("E:/NISHAFREM/screenshots/image_" + timestamp + ".png");
+    //     return this;
+
+    // },
+
+      
  //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
@@ -143,7 +158,7 @@ exports.config = {
         source: true,       // <boolean> hide source uris
         profile: [],        // <string[]> (name) specify the profile to use
         strict: false,      // <boolean> fail if there are any undefined or pending steps
-        tagExpression: '',  // <string> (expression) only execute the features or scenarios with tags matching the expression
+        tagExpression: '@run',  // <string> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 60000,     // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
     },
@@ -189,14 +204,34 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+
+        
+
+        const chai = require('chai')
+        const chaiwebdriver =require('chai-webdriverio').default
+        chai.use(chaiwebdriver(browser))
+
+
+        const moment = require('moment')    
+        const timestamp = moment().format('DDMMYYYY-HHmmss')
+    //     const timestamp = moment().format('dd-MM-yyyy HH-mm-ss')
+       scrpath = ("./screenshots/image_" + timestamp  +  ".png")
+
+
+
+
+        global.assert = chai.assert
+        global.should = chai.should
+        global.expect = chai.expect
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
      * @param {Array} args arguments that command would receive
      */
     // beforeCommand: function (commandName, args) {
+        
     // },
     /**
      * Runs before a Cucumber feature

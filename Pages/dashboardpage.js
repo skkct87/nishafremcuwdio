@@ -10,35 +10,36 @@ class AdminDashboard {
     }
     
     get invoices() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-0.ng-star-inserted.active-menuitem > a > span').getAttribute('Invoices')
+        return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[4]/a/span')
     }
     
     get invoicesnew() {
-        return $$('#ui-tabpanel-0')
+        return $('=Invoices')
     }
     
     get publishinvoice() {
-        return $$('#ui-tabpanel-1')
+        return $('=Publish Invoices')
     }
     
     get uploadinvoice() {
-        return $$('#ui-tabpanel-2')
+        return $('=Upload Invoices')
+
     }
     
     get invoicehistory() {
-        return $$('#ui-tabpanel-3')
+        return $('=Invoice History')
     }
     
     get suppliersetup() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(5) > a > span')
+        return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[5]/a/span')
     }
     
     get suppliercompnies() {
-        return $('//*[@id="ui-tabpanel-0-label"]/span').getAttribute('Supplier Companies')
+        return $('//*[@id="ui-tabpanel-0-label"]/span')
     }
     
     get uploadsupplier() {
-        return $('//*[@id="ui-tabpanel-1-label"]/span').getAttribute('Upload New Suppliers')
+        return $('=Upload New Suppliers')
     }
     
     get trades() {
@@ -50,7 +51,7 @@ class AdminDashboard {
     }
     
     get tradehistory() {
-        return $('#ui-tabpanel-7-label > span')
+        return $('=Trade History')
     }
     
     get company() {
@@ -66,7 +67,7 @@ class AdminDashboard {
     }
     
     get creditlimit() {
-        return $('#ui-tabpanel-9-label > span')
+        return $('=CREDIT LIMIT')
     }
     
     get investors() {

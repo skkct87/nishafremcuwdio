@@ -6,8 +6,10 @@ const LoginPage = require ('E:/NISHAFREM/Pages/loginpage.js')
 
 Given ('user navigates to the website', function () {
      
-       browser.maximizeWindow()
-       browser.url('https://nextgentest.whitehallfinance.com')
+       browser.maximizeWindow();
+       //browser.scaleWindow('0.8');
+     //   browser.zoom('80%')
+       browser.url('https://nextgentest.whitehallfinance.com');
               
        });
 
