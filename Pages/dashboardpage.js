@@ -39,12 +39,15 @@ class AdminDashboard {
     }
     
     get uploadsupplier() {
-        return $('=Upload New Suppliers')
+       return $('=Upload New Suppliers')
+      // return $('/html/body/app-root/app-main/div/div/div[2]/div/app-supplier-setup/div/div/div/p-tabview/div/ul/li[2]/a')
     }
     
     get trades() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(6) > a > span')
+        //return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(6) > a > span')
+    return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[6]/a')
     }
+
     
     get tradesall() {
         return $('#ui-tabpanel-6-label > span')
@@ -59,7 +62,8 @@ class AdminDashboard {
     }
     
     get investorportfolio() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-0.ng-star-inserted.active-menuitem > a > span')
+        //return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-0.ng-star-inserted.active-menuitem > a > span')
+    return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[8]/a/span')
     }
     
     get creditline() {
