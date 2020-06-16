@@ -83,23 +83,28 @@ class AdminDashboard {
     }
     
     get buyerinvshortfall() {
-        return $('#ui-tabpanel-1-label > span')
+        return $('=Buyer-Investor Shortfall')
     }
     
     get investorcashposition() {
-        return $('#ui-tabpanel-2-label > span')
+        return $('=Investor-Cash Positions')
     }
     
     get invbuyercompany() {
-        return $('#ui-tabpanel-3-label > span')
+        return $('=Investor-Buyer Companies')
     }
     
     get reports() {
         return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(10) > a > span')
     }
+
+    get overduereports(){
+        return $('=OVERDUE REPORT')
+    }
     
     get paymentschedules() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-1.ng-star-inserted.active-menuitem > a > span')
+        //return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-1.ng-star-inserted.active-menuitem > a > span')
+    return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[11]/a/span')
     }
     
     get paymentschedule() {
@@ -107,39 +112,43 @@ class AdminDashboard {
     }
     
     get scheduledetail() {
-        return $('#ui-tabpanel-5-label > span')
+        return $('=SCHEDULE DETAILS')
     }
     
     get promnote() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(12) > a > span')
-    }
+        //return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(12) > a > span')
+   return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[12]/a/span')
+  //return $('document.querySelector("body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-0.ng-star-inserted.active-menuitem > a > span")')  
+}
     
     get promissorynote() {
         return $('#ui-tabpanel-6-label > span')
     }
     
     get generatepromnote() {
-        return $('#ui-tabpanel-7-label > span')
+        return $('=GENERATE PROMISSORY NOTE')
     }
     
     get bmaptab() {
-        return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(13) > a > span')
-    }
+       // return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(13) > a > span')
+   return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[13]/a/span')
+ // return $('document.querySelector("body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li.ng-tns-c2-0.ng-star-inserted.active-menuitem > a > span")')  
+}
     
     get bmaps() {
         return $('#ui-tabpanel-8-label > span')
     }
     
     get generatebmap() {
-        return $('#ui-tabpanel-9-label > span')
+        return $('=GENERATE BMAPS')
     }
     
     get repay() {
-        return $('#ui-tabpanel-10-label > span')
+        return $('=REPAYS')
     }
     
     get generaterepay() {
-        return $('#ui-tabpanel-11-label > span')
+        return $('=GENERATE REPAYS')
     }
     
     get settings() {
@@ -151,17 +160,20 @@ class AdminDashboard {
     }
     
     get suppliersetting() {
-        return $('#ui-tabpanel-13-label > span')
+        return $('=SUPPLIER COMPANY SETTINGS')
     }
     
     get buyersetting() {
-        return $('#ui-tabpanel-14-label > span')
+        return $('=BUYER COMPANY SETTINGS')
     }
     
     get document() {
         return $('body > app-root > app-main > div > div > div.layout-menu > p-scrollpanel > div > div.ui-scrollpanel-wrapper > div > app-menu > ul > li:nth-child(15) > a > span')
     }
     
+    get schedulejob() {
+        return $('/html/body/app-root/app-main/div/div/div[1]/p-scrollpanel/div/div[1]/div/app-menu/ul/li[16]/a/span')
+    }
     
     }
     
